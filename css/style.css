@@ -1,0 +1,259 @@
+#header{
+  background: url(../img/showcase.jpeg) no-repeat center center/cover;
+  color: #fff;
+}
+
+.main-header .container{
+  height: 80px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header .logo{
+  font-size: 2rem;
+  color: #fcfbff;
+  letter-spacing: 4px;
+}
+.main-header .logo span{
+  color: #fff;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+/* nav */
+nav ul.main-nav{
+  display: flex;
+}
+nav ul.main-nav a{
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav ul.main-nav a:hover{
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+/* showcase */
+#showcase{
+  margin-top: 50px;
+  height: 450px;
+}
+.showcase-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+.showcase-content h1{
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.showcase-content p{
+  padding-bottom: 30px;
+}
+
+/* our website */
+#website{
+  background: #fcfbff;
+  color: #3e5e90;
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+#website h2, #website p{
+  margin-bottom: 20px;
+}
+#website .website-content{
+  height: 250px;
+}
+
+/* boxes */
+.box{
+  background: #3e5e90;
+  color: #fff;
+  text-align: center;
+  padding: 20px 30px;
+}
+.box img{
+  width: 60px;
+}
+.boxes *{
+  padding-top: 10px;
+}
+/* #service */
+#service{
+  background: #fff;
+  color: #3e5e90;
+  margin: 20px 0;
+
+}
+#service .service-content{
+  text-align: center;
+  padding: 15px 0;
+}
+#service .service-container{
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+#service .service-container div{
+  background:#f1f1f1;
+  border-radius: 50px 0 0 50px;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  position: relative;
+
+}
+#service .service-container div i{
+  border: #3e5e90 3px solid;
+  border-radius: 50%;
+  padding: .8rem;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#service .service-container div p{
+  position: relative;
+  left: 55px;
+}
+
+/* count section */
+#count{
+  background: #4069ab;
+  color: #fff;
+  padding: 1.5rem 1rem;
+}
+
+.count-content.grid{
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.count-content div i{
+  border: 3px solid #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.count-content div li:nth-child(2){
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* portfolio */
+#portfolio{
+  margin: 20px 0;
+  color: #4069ab;
+  text-align: center;
+}
+.portfolio-nav ul{
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+}
+.portfolio-nav a{
+  color: #3e5e90;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 15px;
+  font-size: 14px;
+}
+.portfolio-nav a:hover, .portfolio-nav a.current{
+  border-bottom: 2px solid #3e5e90;
+  border-top: 8px solid #3e5e90;
+}
+
+#footer{
+  background: #222222;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  font-weight: bold;
+  position: relative;
+}
+#footer a i{
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border: 5px solid #fff;
+  border-radius: 40%;
+  opacity: 0.4;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2rem;
+}
+.menu-btn{
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  display: none;
+}
+
+/* media query */
+@media (max-width: 568px){
+ .menu-btn{
+  display: block;
+  color: #fff;
+ }
+ .menu-btn:hover{
+  opacity: 0.7;
+ }
+ nav ul.main-nav{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #3e5e90;
+  width: 50%;
+  height: 100%;
+  opacity: 0.8;
+  padding: 30px;
+  transform: translateX(-500px);
+  transition: transform 0.5s ease-in-out;
+ }
+
+ nav ul.main-nav li{
+  padding: 10px;
+  border-bottom: #ccc solid 1px;
+ }
+ nav ul.main-nav li:last-child{
+  border-bottom: 0;
+ }
+ nav ul.main-nav.show{
+  transform: translateX(-20px);
+  width: 60%;
+ }
+
+
+
+
+  #website .website-content{
+    height: 350px;
+  }
+
+  #story .boxes.grid{
+    grid-template-columns: 1fr;
+  }
+  #service .service-container.grid, #count .count-content.grid,
+  #portfolio .portfolio-gallery-all.grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
